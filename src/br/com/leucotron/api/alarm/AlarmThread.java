@@ -35,11 +35,15 @@ public class AlarmThread implements Runnable {
 
 	}
 
-	public synchronized String getmThreadName() {
+	public String getmThreadName() {
 		return mThreadName;
 	}
 	
-	public synchronized void stop () {
+	public Long getTimeInMillis () {
+		return mAlarm.getDateInMillis();
+	}
+	
+	public void stop () {
 		shutdown = true;
 	}
 	
